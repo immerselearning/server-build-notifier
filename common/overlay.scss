@@ -1,0 +1,14 @@
+#server-build-overlay {
+  $height: 80px;
+
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: $height;
+  width: 160px;
+  text-align: center;
+  line-height: $height;
+  background: white;
+  box-shadow: 1px 3px 1px green;
+  border-radius: 5px;
+}
