@@ -3,6 +3,18 @@ Chrome and Firefox extension aiming to show on each immerse server's login page 
 
 ===
 
+#### Devlog
+
+##### 30/09/2015 - Christopher-Steel : 
+Created basic project structure, needs more work.
+One thing I've already noticed is that keeping the code tidy is going to be a slight challenge due to the restraints that extensions have. Another is that I'm going to need some kind of build logic with a development mode and a release mode.
+
+I'd like to use Grunt for this.
+
+v0.1.x will be complete once I get the overlay to show on Firefox and once I have proper build logic set up
+
+===
+
 #### Planned versions:
 - v0.1.x display "pouet" on develop for chrome and ff
 - v0.2.x authenticate to teamcity api (don't push credentials to git)
