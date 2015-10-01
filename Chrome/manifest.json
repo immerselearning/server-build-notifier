@@ -11,7 +11,7 @@
         "https://develop.immerselearning.com/"
       ],
       "css": ["overlay.min.css"],
-      "js": ["jquery.js", "overlay.js"]
+      "js": ["jquery.min.js", "overlay.min.js"]
     }
   ]
 }
