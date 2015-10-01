@@ -13,6 +13,15 @@ I'd like to use Grunt for this.
 
 v0.1.x will be complete once I get the overlay to show on Firefox and once I have proper build logic set up
 
+##### 01/10/2015 - Christopher-Steel :
+Created a clumsy Gruntfile.
+
+For now it only compiles scss to css and then minifies both css and javascript, putting the resulting files in the build/Chrome directory. I'd like to find a clean solution for the common folder since its contents are going to be "built" and the resulting files put in both build/Chrome and build/Firefox.
+
+It would be cool if I could generate (or configure) the Chrome extension manifest on build to avoid data duplication between it and the Gruntfile.
+
+I also got confused and added jquery.js to the common folder, oh well, I'll fix that later.
+
 ===
 
 #### Planned versions:
