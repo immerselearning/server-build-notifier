@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "ILE server build state notifier",
+  "description": "Extension to warn when on ILE servers if they are currently building a newer version",
+  "version": "0.1.0",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://develop.immerselearning.com/"
+      ],
+      "css": ["overlay.min.css"],
+      "js": ["jquery.min.js", "overlay.min.js"]
+    }
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "ile-server-build-notifier@christopher-g-steel.com"
+    }
+  }
+}
