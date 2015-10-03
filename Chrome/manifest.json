@@ -10,8 +10,8 @@
       "matches": [
         "https://develop.immerselearning.com/"
       ],
-      "css": ["overlay.min.css"],
-      "js": ["jquery.min.js", "overlay.min.js"]
+      "css": ["toastr.min.css", "overlay.min.css"],
+      "js": ["jquery.min.js", "toastr.min.js", "overlay.min.js"]
     }
   ]
 }

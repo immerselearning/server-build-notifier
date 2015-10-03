@@ -1,10 +1,19 @@
-function add_overlay() {
-  $("body").children().last().append(
-    "<div id='server-build-overlay'>\n" +
-    "    <h3>Pouet!</h3>\n" +
-    "</div>"
-  );
-}
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "0",
+  "extendedTimeOut": "0",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+};
 
-alert("It's alive!");
-add_overlay();
+toastr["warning"]("You have been warned", "Pouet");
