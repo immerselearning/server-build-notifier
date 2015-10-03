@@ -28,6 +28,9 @@ module.exports = function(grunt) {
       chrome: {
         files: generate_uglify_files("Chrome", "js")
       },
+      firefox: {
+        files: generate_uglify_files("Firefox", "js")
+      },
       vendor: {
         files: generate_uglify_files("vendor", "js")
       }
@@ -39,6 +42,9 @@ module.exports = function(grunt) {
       },
       chrome: {
         files: generate_uglify_files("Chrome", "scss", "css")
+      },
+      firefox: {
+        files: generate_uglify_files("Firefox", "scss", "css")
       },
       vendor: {
         files: generate_uglify_files("vendor", "css")
