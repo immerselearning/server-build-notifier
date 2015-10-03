@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: "build/Chrome",
-          src: "build/Chrome/*.min.{css,js}",
+          src: "*.min.{css,js}",
           dest: "build/Firefox"
         }]
       },
