@@ -3,7 +3,7 @@
 
   "name": "ILE server build state notifier",
   "description": "Extension to warn when on ILE servers if they are currently building a newer version",
-  "version": "0.1.0",
+  "version": "0.1.1",
 
   "content_scripts": [
     {
@@ -11,8 +11,16 @@
         "https://develop.immerselearning.com/"
       ],
       "css": ["toastr.min.css", "overlay.min.css"],
-      "js": ["jquery.min.js", "toastr.min.js", "overlay.min.js"]
+      "js": [
+        "jquery.min.js",
+        "toastr.min.js",
+        "overlay.min.js"
+      ]
     }
+  ],
+
+  "permissions": [
+    "https://teamcity.immerselearning.com/"
   ],
 
   "applications": {

@@ -17,3 +17,25 @@ toastr.options = {
 };
 
 toastr["warning"]("You have been warned", "Pouet");
+
+var username = "";
+var password = "";
+
+$.ajaxSetup({
+  headers: {
+    "Authorization": "Basic " + btoa(username + ":" + password)
+  }
+});
+
+$.ajax({
+  type: "GET",
+  dataType: "json",
+  url: "https://teamcity.immerselearning.com/httpAuth/app/rest/changes/id:12485",
+  success: function(data) {
+    console.log(data);
+    toastr["warning"](data.version);
+  },
+  error: function(data) {
+    console.error("dammit? " + data.responseText);
+  }
+});
