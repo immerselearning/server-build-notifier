@@ -1,5 +1,8 @@
 # server-build-notifier
-Chrome and Firefox extension aiming to show on each immerse server's login page a message saying if the server is up to date or if there are pending changes in TeamCity
+Chrome and Firefox extension aiming to show on each immerse server's login page a message saying if the server is up to date or if there are pending changes in TeamCity.
+
+Since Firefox are planning on deprecating their current extension system in favor of more Chrome-like system, I'll be following their experimental documentation to build for their upcoming system (planned for December 2015).
+That means that this extension will not work until then for Firefox users. I'd accept contributions if anyone is willing to set up code to get it working with the to-be-deprecated system.
 
 ===
 
@@ -30,6 +33,20 @@ Also, I've put in automatic zipping of the Firefox WebExtension. I'm not sure wh
 I'd like to make my life easier with the actual display so I'll use [toastr](https://codeseven.github.io/toastr/) instead of my planned manual implementation.
 
 Looks like this is v0.1.0 finished then!
+
+##### 03/10/2015 - Christopher-Steel:
+I made the switch from custom code to [toastr](https://codeseven.github.io/toastr/), it looks way better. 
+
+Sadly Ajax calls do not seem to work in Firefox WebExtensions currently, I'll investigate more on that. I feel I'm walking on thin ice while working with WebExtensions since they're still quite experimental, however following the documentation mozilla put out should be enough to have a working or close-to-working extension as the system is improved.
+
+Also, Chrome extension can only call Ajax on urls in the manifests permissions. This probably means that it would be hard to make this extension modular and useful for other people than the main intended target.
+
+
+The system I'm currently using to Authenticate to TeamCity and grab info from their API has the side effect of logging the browser into a TeamCity session, allowing the user to then navigate to the web interface. This may be undesired since not all target users currently have an account nor need one.
+
+I struggled a bit with interpreting the XML returned by the TeamCity API then realized that I could request JSON instead, less hassle for me!
+
+v0.2.0 is ready! (though underwhelming)
 
 ===
 
