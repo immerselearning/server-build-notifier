@@ -16,10 +16,9 @@ toastr.options = {
   "hideMethod": "fadeOut"
 };
 
-toastr["warning"]("You have been warned", "Pouet");
-
 var username = "";
 var password = "";
+var url = "https://teamcity.immerselearning.com/httpAuth/app/rest";
 
 $.ajaxSetup({
   headers: {
@@ -30,12 +29,21 @@ $.ajaxSetup({
 $.ajax({
   type: "GET",
   dataType: "json",
-  url: "https://teamcity.immerselearning.com/httpAuth/app/rest/changes/id:12485",
+  url: url + "/builds/buildType:Develop-Unity3D,running:true",
   success: function(data) {
-    console.log(data);
-    toastr["warning"](data.version);
+    toastr["warning"]("There is a build running, you should probably wait for it to finish");
   },
   error: function(data) {
-    console.error("dammit? " + data.responseText);
+  }
+});
+
+$.ajax({
+  type: "GET",
+  dataType: "json",
+  url: url + "/builds/buildType:Develop-Archway,running:true",
+  success: function(data) {
+    toastr["warning"]("There is a build running, you should probably wait for it to finish");
+  },
+  error: function(data) {
   }
 });
